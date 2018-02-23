@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif; }
+
+img {
+  max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.2em; }
+
+main {
+  padding-bottom: 4em; }
+
+.main-header {
+  background: #514077; }
+  .main-header__top {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.main-logo {
+  width: 40%; }
+  @media screen and (min-width: 1024px) {
+    .main-logo {
+      width: 15%; } }
+
+.icon-menu {
+  font-size: 2em;
+  color: #fff;
+  margin-right: .5em;
+  cursor: pointer; }
+
+.main-banner {
+  position: relative; }
+  .main-banner:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#514077, #FFAD01);
+    top: 0;
+    opacity: .3; }
+  .main-banner__img {
+    display: block;
+    width: 100%; }
+  .main-banner__copy {
+    z-index: 100;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 85%;
+    color: #fff; }
+    .main-banner__copy__title {
+      font-size: 1.3em;
+      margin: 0;
+      text-transform: uppercase; }
+      @media screen and (min-width: 1024px) {
+        .main-banner__copy__title {
+          font-size: 3em; } }
+    .main-banner__copy__content {
+      margin: 0; }
+      @media screen and (min-width: 1024px) {
+        .main-banner__copy__content {
+          font-size: 1.3em;
+          font-weight: 300; } }
+    .main-banner__copy__button {
+      font-size: .8em; }
+      @media screen and (min-width: 1024px) {
+        .main-banner__copy__button {
+          font-size: 1.1em; } }
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: -20em;
+  background: #FFAD01;
+  z-index: 200;
+  height: 100vh;
+  padding: 1em;
+  width: 20em;
+  transition: all .3s; }
+  .main-nav.mostrar {
+    right: 0; }
+
+.main-menu {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0; }
+  .main-menu__item {
+    border-bottom: 1px solid rgba(81, 64, 119, 0.2); }
+  .main-menu__link {
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block;
+    line-height: 2.5; }
+
+body {
+  position: relative;
+  transition: all .3s;
+  right: 0; }
+  body.mostrar {
+    right: 20em; }
+
+.button {
+  display: inline-block;
+  line-height: 2.5;
+  text-decoration: none;
+  margin-top: 1em;
+  color: #fff;
+  padding: 0 1.2em; }
+  .button.primary {
+    background: #514077; }
+    .button.primary:hover {
+      background: #3a2e56; }
+  .button.secondary {
+    background: #924992; }
+    .button.secondary:hover {
+      background: #703870; }
+  .button.third {
+    background: #FFAD01;
+    color: #111; }
+    .button.third:hover {
+      background: #e79c00; }
+
+@media screen and (min-width: 480px) {
+  .services {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.service {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 50%;
+  background: #514077;
+  position: relative;
+  color: #fff;
+  text-align: center; }
+  @media screen and (min-width: 480px) {
+    .service {
+      padding-bottom: 30%; } }
+  @media screen and (min-width: 1024px) {
+    .service {
+      padding-bottom: 20%; } }
+  .service.second {
+    background: #924992; }
+  .service.third {
+    background: #FFAD01;
+    color: #514077; }
+  .service__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0; }
+
+/*
+<div class="staff__person">
+<img src="img/staff-1.jpg" alt="" class="staff__person__img">
+<h3 class="staff__person__name">Mario</h3>
+<a href="#" class="staff__person__button">Pedir cita</a>
+</div>
+<div class="staff__person">
+<img src="img/staff-1.jpg" alt="" class="staff__person__img">
+<h3 class="staff__person__name">Sandra</h3>
+<a href="#" class="staff__person__button button third">Pedir cita</a>
+</div>
+</section>
+*/
+@media screen and (min-width: 480px) {
+  .staff {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+
+.staff__title {
+  text-align: center;
+  width: 100%; }
+
+.staff__person {
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(17, 17, 17, 0.05);
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center; }
+  @media screen and (min-width: 480px) {
+    .staff__person {
+      width: 46%; } }
+  @media screen and (min-width: 1024px) {
+    .staff__person {
+      width: 24%; } }
+  .staff__person__img {
+    margin-bottom: .5em;
+    border-radius: 50%;
+    width: 50%;
+    border: 3px solid #924992; }
+  .staff__person__name {
+    margin: 0; }
+  .staff__person__button {
+    font-size: .8em; }
+
+/*
+<section class="contact">
+  <div class="visit-us">
+    <h2 class="subtitle">Visitanos</h2>
+    <div class="visit-us__map">
+    </div>
+    <div class="visit-us__address">Calle ABC, 123,int. 201 - Mexico DF</div>
+    <div class="visit-us__phone">987-654-321</div>
+  </div>
+  <div class="write-us">
+    <h2 class="subtitle">O escríbenos</h2>
+    <form action="contacto.php" method="post">
+      <label for="name">Su nombre</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Su correo</label>
+      <input type="email" id="email" name="email">
+      <label for="phone">Su teléfono</label>
+      <input type="text" id="phone" name="phone">
+      <label for="message">Su mensaje</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+</section>
+
+*/
+.contact {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 768px) {
+    .contact {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+
+@media screen and (min-width: 768px) {
+  .visit-us,
+  .write-us {
+    width: 48%; } }
+
+.visit-us__address, .visit-us__phone {
+  font-size: .9em;
+  line-height: 1.5;
+  color: #924992; }
+
+.visit-us .icon-pin:before,
+.visit-us .icon-phone:before {
+  position: relative;
+  top: 2px;
+  margin-right: .3em; }
+
+.write-us__form label {
+  display: inline-block;
+  margin-bottom: .2em;
+  font-size: .9em;
+  opacity: .8; }
+
+.write-us__form input, .write-us__form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: .5em; }
+
+.write-us__form [type="submit"] {
+  border: none;
+  text-transform: uppercase;
+  width: auto; }
+
+.subtitle {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.3);
+  font-size: 1.4em; }
+
+.l-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.main-footer {
+  background: #514077;
+  text-align: center;
+  padding: 1.5em 0;
+  margin-top: auto; }
+  .main-footer [class^="icon"] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4em;
+    margin: 0 .5em;
+    display: inline-block;
+    opacity: .5; }
+    .main-footer [class^="icon"]:hover {
+      opacity: 1; }

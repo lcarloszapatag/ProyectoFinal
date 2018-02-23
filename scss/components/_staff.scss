@@ -1,0 +1,56 @@
+/*
+<div class="staff__person">
+<img src="img/staff-1.jpg" alt="" class="staff__person__img">
+<h3 class="staff__person__name">Mario</h3>
+<a href="#" class="staff__person__button">Pedir cita</a>
+</div>
+<div class="staff__person">
+<img src="img/staff-1.jpg" alt="" class="staff__person__img">
+<h3 class="staff__person__name">Sandra</h3>
+<a href="#" class="staff__person__button button third">Pedir cita</a>
+</div>
+</section>
+*/
+
+.staff {
+
+  @include desde($small){
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    text-align: center;
+    width: 100%;
+  }
+  &__person {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba($black,.05);
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+    @include desde($small){
+      width: 46%;
+    }
+
+    @include desde($large){
+      width: 24%;
+    }
+
+    &__img {
+      margin-bottom: .5em;
+      border-radius: 50%;
+      width: 50%;
+      border: 3px solid $color2;
+    }
+
+    &__name {
+      margin:0;
+    }
+
+    &__button {
+      font-size: .8em;
+    }
+  }
+}

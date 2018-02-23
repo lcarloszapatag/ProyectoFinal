@@ -1,0 +1,78 @@
+/*
+<section class="contact">
+  <div class="visit-us">
+    <h2 class="subtitle">Visitanos</h2>
+    <div class="visit-us__map">
+    </div>
+    <div class="visit-us__address">Calle ABC, 123,int. 201 - Mexico DF</div>
+    <div class="visit-us__phone">987-654-321</div>
+  </div>
+  <div class="write-us">
+    <h2 class="subtitle">O escríbenos</h2>
+    <form action="contacto.php" method="post">
+      <label for="name">Su nombre</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Su correo</label>
+      <input type="email" id="email" name="email">
+      <label for="phone">Su teléfono</label>
+      <input type="text" id="phone" name="phone">
+      <label for="message">Su mensaje</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+</section>
+
+*/
+
+.contact {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  @include desde($medium){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.visit-us,
+.write-us {
+  @include desde($medium){
+    width: 48%;
+  }
+}
+
+.visit-us {
+  &__address,
+  &__phone {
+    font-size: .9em;
+    line-height:1.5;
+    color: $color2;
+  }
+  .icon-pin:before,
+  .icon-phone:before{
+    position: relative;
+    top: 2px;
+    margin-right: .3em;
+  }
+}
+
+.write-us__form {
+  label {
+    display: inline-block;
+    margin-bottom: .2em;
+    font-size: .9em;
+    opacity: .8;
+  }
+  input,textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: .5em;
+  }
+
+  [type="submit"]{
+    border: none;
+    text-transform: uppercase;
+    width: auto;
+  }
+}
